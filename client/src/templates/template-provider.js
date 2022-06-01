@@ -1,7 +1,7 @@
 import { createContext } from "react";
 import { createTheme, ThemeProvider } from "@material-ui/core/styles";
 
-const TemplateContext = createContext();
+const TemplateContext = createContext({});
 
 const TemplateProvider = ({ children }) => {
   const theme = createTheme({
@@ -23,7 +23,7 @@ const TemplateProvider = ({ children }) => {
     },
   });
   return (
-    <TemplateContext.Provider>
+    <TemplateContext.Provider value={{}}>
       <ThemeProvider theme={theme}>{children}</ThemeProvider>
     </TemplateContext.Provider>
   );

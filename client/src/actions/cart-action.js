@@ -74,7 +74,7 @@ export const getCartItems = () => async (dispatch, getState) => {
         data?.map((value) => {
           var isExist = false;
           cartItems.forEach((item) => {
-            if (item._id == value.productDetails[0]._id) {
+            if (item._id === value.productDetails[0]._id) {
               isExist = true;
             }
           });

@@ -16,10 +16,10 @@ const useStyle = makeStyles((theme) => ({
   },
   image: {
     width: "60%",
-    maxHeight:150,
+    maxHeight: 150,
     objectFit: "contain",
     [theme.breakpoints.down("sm")]: {
-      margin:"15px 0",
+      margin: "15px 0",
       width: "100%",
     },
   },
@@ -38,7 +38,7 @@ const useStyle = makeStyles((theme) => ({
     justifyContent: "center",
     alignItems: "start",
   },
-  itemTitle:{
+  itemTitle: {
     color: "#000",
     fontSize: 14,
     "&:hover": {
@@ -46,13 +46,13 @@ const useStyle = makeStyles((theme) => ({
       color: "#222",
     },
   },
-  paymentDetails:{
-    paddingLeft:"2%",
+  paymentDetails: {
+    paddingLeft: "2%",
     [theme.breakpoints.down("xs")]: {
-      display:"flex",
-      justifyContent:"space-between",
-      paddingTop:10,
-      paddingLeft:0,
+      display: "flex",
+      justifyContent: "space-between",
+      paddingTop: 10,
+      paddingLeft: 0,
     },
   }
 }));
@@ -68,7 +68,6 @@ function OrderRow({ order }) {
         <Box className={classes.itemRow}>
           <Grid container>
             <Grid item lg={2} md={2} sm={3} xs={12}>
-              {/* Image */}
               <Box>
                 <img
                   src={order.productDetails[index].url}
@@ -78,7 +77,6 @@ function OrderRow({ order }) {
               </Box>
             </Grid>
             <Grid item lg={3} md={3} sm={3} xs={8}>
-              {/* Title */}
               <Link to={`/product/${order.productDetails[index]._id}`}>
                 <Typography className={classes.itemTitle} >
                   {Shorten(order.productDetails[index].title.longTitle)}
@@ -86,11 +84,16 @@ function OrderRow({ order }) {
               </Link>
             </Grid>
             <Grid item lg={2} md={2} sm={3} xs={4} className={classes.centerItems}>
-              {/* Price */}
-              <span className={classes.price}>${item.price}</span>
+              <Box>
+                <Typography className={classes.text}>
+                  <span className={classes.price}>${item.price * item.qty}</span>
+                </Typography>
+                <Typography className={classes.text}>
+                  ${item.price} x {item.qty}
+                </Typography>
+              </Box>
             </Grid>
             <Grid item lg={2} md={2} sm={3} xs={12} className={classes.paymentDetails}>
-              {/* Payment Mode */}
               <Typography className={classes.text}>
                 {orderDate.toLocaleDateString()}
               </Typography>
@@ -99,7 +102,6 @@ function OrderRow({ order }) {
               </Typography>
             </Grid>
             <Grid item lg={3} md={3} sm={12} xs={12}>
-              {/* Address */}
               <Box>
                 <Typography className={classes.text}>
                   {address.name}

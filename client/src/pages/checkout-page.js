@@ -270,55 +270,51 @@ const CheckoutPage = () => {
                   </span>
                 </Typography>
               </Box>
-              <button className={classes.changeBtn}>Change</button>
             </Box>
             <Box className={classes.addressComponent}>
-              {activeComponent.address ? (
-                <>
-                  <Box className={classes.activeComponent}>
-                    <span
-                      className={classes.stepCount}
-                      style={{ backgroundColor: "#fff" }}
-                    >
-                      2
-                    </span>
-                    DELIVERY ADDRESS
-                  </Box>
-                  <Box
-                    style={{
-                      padding: "0px 10px",
-                      maxHeight: "460px",
-                      overflowY: "auto",
-                    }}
-                  >
-                    <RadioGroup aria-label="type" name="address">
-                      {addresses.length > 0 &&
-                        addresses.map((address, index) => (
-                          <Box style={{ display: "flex" }}>
-                            <FormControlLabel
-                              key={index}
-                              value={address._id}
-                              control={<Radio style={{ color: "#222" }} />}
+              {activeComponent.address ? (<>
+                <Box className={classes.activeComponent}>
+                  <span
+                    className={classes.stepCount}
+                    style={{ backgroundColor: "#fff" }}>
+                    2
+                  </span>
+                  DELIVERY ADDRESS
+                </Box>
+                <Box
+                  style={{
+                    padding: "0px 10px",
+                    maxHeight: "460px",
+                    overflowY: "auto",
+                  }}>
+                  <RadioGroup aria-label="type" name="address">
+                    {addresses.length > 0 &&
+                      addresses.map((address, index) => (
+                        <Box style={{ display: "flex" }}>
+                          <FormControlLabel
+                            key={index}
+                            value={address._id}
+                            control={<Radio style={{ color: "#222" }} />}
+                          />
+                          <div>
+                            <AddressCard
+                              address={address}
+                              isCheckout={true}
                             />
-                            <div>
-                              <AddressCard
-                                address={address}
-                                isCheckout={true}
-                              />
-                              <Button
-                                variant="contained"
-                                className={classes.actionBtn}
-                                onClick={() => deliverHere(address)}
-                                style={{ backgroundColor: "#222" }}
-                              >
-                                Deliver Here
-                              </Button>
-                            </div>
-                          </Box>
-                        ))}
-                    </RadioGroup>
-                  </Box>
-                </>
+                            <Button
+                              variant="contained"
+                              className={classes.actionBtn}
+                              onClick={() => deliverHere(address)}
+                              style={{ backgroundColor: "#222" }}
+                            >
+                              Deliver Here
+                            </Button>
+                          </div>
+                        </Box>
+                      ))}
+                  </RadioGroup>
+                </Box>
+              </>
               ) : (
                 <Box style={{ display: "flex", alignItems: "start" }}>
                   <Box
@@ -351,7 +347,7 @@ const CheckoutPage = () => {
                     style={{ marginTop: 15, marginRight: 15 }}
                     onClick={handleChange}
                     className={classes.changeBtn}>
-                    Change
+                    CHANGE
                   </button>
                 </Box>
               )}
@@ -392,7 +388,7 @@ const CheckoutPage = () => {
                           value="online"
                           control={<Radio style={{ color: "#222" }} />}
                           label="Online (Currently Unavailable)"
-                          />
+                        />
                       </Box>
                       <FormControlLabel
                         value="cash"
@@ -408,8 +404,7 @@ const CheckoutPage = () => {
                           backgroundColor: "#222",
                           marginLeft: "auto",
                         }}
-                        onClick={confirmOrder}
-                      >
+                        onClick={confirmOrder}>
                         {paymentMode === "cash" ? " CONFIRM ORDER" : "CONTINUE"}
                       </Button>
                     )}

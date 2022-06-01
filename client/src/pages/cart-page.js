@@ -78,8 +78,7 @@ const Cart = () => {
             md={9}
             sm={12}
             xs={12}
-            className={classes.leftComponent}
-          >
+            className={classes.leftComponent}>
             <Box className={classes.header}>
               <Typography style={{ fontWeight: 600, fontSize: 18 }}>
                 My Cart ({cartItems?.length})

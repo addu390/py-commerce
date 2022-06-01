@@ -30,15 +30,13 @@ function OrderSuccessPage() {
             marginTop: "-30px",
             marginBottom: "30px",
             fontWeight: 500,
-          }}
-        >
+          }}>
           Order Completed !
         </div>
         <Button
           style={{ backgroundColor: "#222" }}
           variant="contained"
-          color="primary"
-        >
+          color="primary">
           <Link to="/orders">My Orders</Link>
         </Button>
       </div>

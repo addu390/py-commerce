@@ -89,16 +89,14 @@ function OrdersPage() {
     <>
       {orderDetails?.length > 0 ? (
         <Grid container className={classes.component}>
-          {/* <Grid item lg={1} md={1} sm={12} xs={12}>
-        </Grid> */}
+          {}
           <Grid
             item
             lg={12}
             md={12}
             sm={12}
             xs={12}
-            className={classes.leftComponent}
-          >
+            className={classes.leftComponent}>
             <Box className={classes.header}>
               <Typography style={{ fontWeight: 600, fontSize: 22 }}>
                 My Orders

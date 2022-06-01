@@ -16,7 +16,7 @@ const GroupedButton = ({
   product
 }) => {
   const classes = useStyle();
-  const [counter, setCounter] = useState(product.qty = 1);
+  const [counter, setCounter] = useState(product.qty);
   const dispatch = useDispatch();
 
   const handleIncrement = () => {

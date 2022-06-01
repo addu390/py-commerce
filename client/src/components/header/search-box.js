@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { makeStyles, InputBase, List, ListItemAvatar, ListItem, ListItemText, Box, Typography} from "@material-ui/core";
+import { makeStyles, InputBase, List, ListItemAvatar, ListItem, ListItemText, Box, Typography } from "@material-ui/core";
 import SearchIcon from "@material-ui/icons/Search";
 
 import { getProducts } from "../../actions/product-action";
@@ -124,7 +124,7 @@ function SearchBar() {
                     .includes(searchText.toLowerCase())
                 )
                 ?.map((product) => (
-                  <a href={`/product/${product._id}`}>
+                  <a href={`/product/${product._id}`} key={product}>
                     <ListItem className={classes.listItem}>
                       <ListItemAvatar className={classes.listAvatar}>
                         <img

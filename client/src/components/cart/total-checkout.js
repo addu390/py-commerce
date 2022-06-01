@@ -49,12 +49,15 @@ const TotalCheckout = ({
     let price = 0,
       discount = 0;
     cartItems.map(item => {
+      if (isNaN(item.qty)) {
+        item.qty = 1
+      }
       price += item.price.mrp * item.qty;
       discount += (item.price.mrp - item.price.cost) * item.qty;
     });
     setPrice(price);
     setDiscount(discount);
-    setDeliveryCharges(price - discount > 500 ? 0 : 40);
+    setDeliveryCharges(price - discount < 500 ? 0 : 40);
 
     if (page === "checkout") {
       dispatch(setTotalAmount(price - discount + deliveryCharges));
