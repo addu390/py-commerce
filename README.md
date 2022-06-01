@@ -20,7 +20,7 @@ A MERN stack eCommerce application
 - Start Client: `cd client` & `npm install && npm run start`
 
 ## Heroku Set-up
-- Install Heroku CLI ([Documentation](https://devcenter.heroku.com/articles/heroku-cli))
+- Install [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)
 - Login and Create a project: `heroku login` and `heroku create <unique-project-name>`
 - Add remote: `heroku git:remote -a py-commerce`
 - Add firebase and atlas (mongoDB) env variables: Project → Settings → Config Vars
