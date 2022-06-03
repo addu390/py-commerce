@@ -3,11 +3,20 @@ A MERN stack eCommerce application
 
 ![Home page](/screens/home-page.png)
 
+## Features
+- Login and Register with OTP
+- Profile management (view and edit profile information including shipping address(es))
+- Cart management (view, add and delete items in/to cart)
+- Order management (Checkout from cart page, place an order and view orders)
+- Favorites (view, add and delete items in/to favorites)
+- Search for products
+- Common 404 page with a cute doggo
+
 ## Integration
 - Firebase:
-    - Create a [Firebase Account](https://firebase.google.com/).
+    - Create a [Firebase Account](https://firebase.google.com/)
     - `Add project` with `Phone Authentication`
-    - Copy the configuration (settings → project settings → SDK setup → npm).
+    - Copy the configuration (settings → project settings → SDK setup → npm)
     - 
 - Atlas (MongoDB):
     - Create an [Atlas Account](https://www.mongodb.com/docs/atlas/getting-started/)
@@ -27,13 +36,9 @@ A MERN stack eCommerce application
 - Deploy: `git mush heroku master`
 
 ## Image Sizes
-- Category Icon: 128 x 128
-- Banner (Top Slider): 1000 x 165
-- Ad Banner: 1000 x 85
-- Product: 500 x 540
-- Featured Brands: 1000 x 540
-- Poster Slider: 1000 x 615
-
-![Home page image sizes](/screens/home-page-sizes-1.png)
-
-![Home page image sizes](/screens/home-page-sizes-2.png)
+- Category Icon: `128 x 128`
+- Banner (Top Slider): `1000 x 165`
+- Ad Banner: `1000 x 85`
+- Product: `500 x 540`
+- Featured Brands: `1000 x 540`
+- Poster Slider: `1000 x 615`
