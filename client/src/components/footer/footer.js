@@ -12,9 +12,9 @@ const useStyles = makeStyles({
   text: {
     fontSize: 16,
   },
-  link:{ 
-    color: "#222", 
-    padding: 3, 
+  link: {
+    color: "#222",
+    padding: 3,
     marginRight: 3,
   },
 });
