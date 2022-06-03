@@ -1,5 +1,7 @@
 # PyCommerce
-A MERN stack eCommerce application
+A MERN (MongoDB, Express, React and Node) stack eCommerce application. Checkout the application at [py-commerce.herokuapp.com](https://py-commerce.herokuapp.com/)
+
+![Heroku](https://pyheroku-badge.herokuapp.com/?app=py-commerce&style=flat-square)
 
 ![Home page](/screens/home-page.png)
 
