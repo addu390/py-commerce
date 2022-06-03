@@ -24,7 +24,7 @@ function Footer() {
   return (
     <Box className={classes.container}>
       <Typography className={classes.text}>
-        Created by Group 16 
+        Created by <a href="https://pyblog.xyz/about">Adesh Nalpet Adimurthy</a>
       </Typography>
     </Box>
   );

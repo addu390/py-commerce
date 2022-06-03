@@ -226,7 +226,7 @@ function RegisterProfile() {
           </FormHelperText>}
       </FormControl>
       <p className={classes.para}>
-        By continuing, you agree to Flipkart's Terms of Use and Privacy Policy.
+        By continuing, you agree to PyCommerce's Terms of Use and Privacy Policy.
       </p>
       <Button variant="contained" className={classes.btn} style={{
       background: "#222",

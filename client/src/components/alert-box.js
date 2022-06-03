@@ -19,7 +19,7 @@ const useStyles = makeStyles(() => ({
     minWidth: 100,
     borderRadius: "2px",
     boxShadow: "none",
-    backgroundColor:"white",
+    backgroundColor: "white",
     border: "1px solid #c2c2c2",
     textTransform: "uppercase",
     textAlign: "center",

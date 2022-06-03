@@ -4,7 +4,7 @@ import React from "react";
 const useStyle = makeStyles((theme) => ({
   component: {
     marginTop: 0,
-    minWidth:960,
+    minWidth: 960,
   },
 }));
 

@@ -18,9 +18,9 @@ const useStyles = makeStyles((theme) => ({
   },
   leftComponent: {
     paddingRight: 15,
-    [theme.breakpoints.between(0,960)]: {
-      paddingRight:0,
-      marginBottom:20,
+    [theme.breakpoints.between(0, 960)]: {
+      paddingRight: 0,
+      marginBottom: 20,
     },
   },
 }));

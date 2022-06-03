@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Box, makeStyles, Typography, Button, Grid } from "@material-ui/core";
 import { useSelector, useDispatch } from "react-redux";
-import {  getCartItems } from "../actions/cart-action";
+import { getCartItems } from "../actions/cart-action";
 import CartItem from "../components/cart/cart-items";
 import TotalView from "../components/cart/total-checkout";
 import EmptyCart from "../components/cart/cart-empty";
@@ -17,9 +17,9 @@ const useStyle = makeStyles((theme) => ({
   },
   leftComponent: {
     paddingRight: 15,
-    [theme.breakpoints.between(0,960)]: {
-      paddingRight:0,
-      marginBottom:20,
+    [theme.breakpoints.between(0, 960)]: {
+      paddingRight: 0,
+      marginBottom: 20,
     },
   },
   header: {
@@ -85,7 +85,7 @@ const Cart = () => {
               </Typography>
             </Box>
             {cartItems.map((item) => (
-              <CartItem item={item}  />
+              <CartItem item={item} />
             ))}
             <Box className={classes.bottom}>
               <Button
@@ -103,8 +103,8 @@ const Cart = () => {
         </Grid>
       ) : (
         <>
-        <EmptyCart />
-        <Footer/>
+          <EmptyCart />
+          <Footer />
         </>
       )}
       <ToastMessageContainer />

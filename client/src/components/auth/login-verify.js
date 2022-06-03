@@ -85,7 +85,6 @@ function OTPVerify({
 
       setLoading(false);
 
-      //Modal Close
       if (popupLogin) {
         dispatch(modalClose());
       }
@@ -125,7 +124,7 @@ function OTPVerify({
       style={{
         display: "flex",
         flexDirection: "column",
-        alignItems: "center",
+        alignItems: "center"
       }}
     >
       <p style={{ fontSize: 18, margin: "20px 0" }}>

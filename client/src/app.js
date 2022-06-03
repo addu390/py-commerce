@@ -61,12 +61,10 @@ function App() {
         </>
       ) : (
         <div className="container">
-          <img className="img" src="/monitors-laptop.png" alt="Mobile Laptop" />
           <div className="text-container">
-            <h2 className="heading">Please use Laptop or desktop</h2>
+            <h2 className="heading">Please use a Laptop/desktop 💻</h2>
             <p className="para">
-              We don't support small screen yet. Please use laptop or desktop for the
-              best experience.
+              Mobile screens are not supported yet!
             </p>
           </div>
         </div>

@@ -10,7 +10,7 @@
 
 .login_popup {
   display: flex;
-  width: 100;
+  width: 100%;
   height: 70vh;
   background-color: #ffffff;
 }
@@ -22,6 +22,7 @@
   background-color: #222;
   padding: 45px 35px;
 }
+
 .container_right {
   flex: 0.65;
   padding: 25px 35px;
@@ -29,17 +30,20 @@
   flex-direction: column;
   align-items: stretch;
 }
+
 .title {
   font-size: 28px;
   font-weight: 500;
   color: #fffffd;
 }
+
 .subtitle {
   font-size: 18px;
   margin-top: 16px;
   line-height: 150%;
   color: #dbdbdb;
 }
+
 .signup_text {
   display: block;
   color: #222;

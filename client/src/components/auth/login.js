@@ -108,7 +108,7 @@ function Login() {
   const query = useQuery();
 
   const { popupLogin } = useSelector((state) => state.userReducer);
-  
+
   const regNumeric = /^[0-9\b]+$/;
   const regPhone = /^[6-9]\d{9}$/;
 
@@ -195,8 +195,7 @@ function Login() {
         dispatch(setIsAuthenticate(isAuth));
         dispatch(setUserInfo(user));
 
-        //Modal Close
-        if(popupLogin){
+        if (popupLogin) {
           dispatch(modalClose());
         }
 
@@ -210,7 +209,6 @@ function Login() {
     } catch (error) {
       setLoading(false);
       const { data } = error.response;
-      //console.log(data);
       if (data.message === "login/invalid-phone-or-password") {
         toastMessage("Invalid Mobile Number or Password.", "info");
       } else {
@@ -223,7 +221,6 @@ function Login() {
     const validatedPhone = validatePhone(values.phone);
     const validatedPassword = validatePassword(values.password);
 
-    //Set Error
     setErrorMsg({
       phone: validatedPhone.errorMsg,
       password: validatedPassword.errorMsg,
@@ -234,13 +231,10 @@ function Login() {
       password: validatedPassword.isError,
     });
     setSubmitCount((cnt) => cnt + 1);
-    //checkout useEffect
   };
 
   const loginWithMobileNumber = async () => {
     const validatedPhone = validatePhone(values.phone);
-
-    //Set Error Status
     setErrorMsg({
       phone: validatedPhone.errorMsg,
     });
@@ -338,7 +332,7 @@ function Login() {
             )}
           </FormControl>
           <p className={classes.para}>
-            By continuing, you agree to Flipkart's Terms of Use and Privacy
+            By continuing, you agree to PyCommerce's Terms of Use and Privacy
             Policy.
           </p>
           <Button
@@ -373,9 +367,8 @@ function Login() {
           </Button>
           <a
             className="signup_text"
-            onClick={() => dispatch(setIsLogin(false))}
-          >
-            New to Flipkart? Create an account
+            onClick={() => dispatch(setIsLogin(false))}>
+            New to PyCommerce? Create an account
           </a>
         </>
       ) : (

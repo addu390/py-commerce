@@ -15,7 +15,7 @@ function LoaderSpinner() {
   const classes = useStyles();
   return (
     <Box className={classes.center}>
-        <CircularProgress style={{ color: "#222" }} />
+      <CircularProgress style={{ color: "#222" }} />
     </Box>
   );
 }
