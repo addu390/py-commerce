@@ -45,7 +45,6 @@ const authentication = async (req, res) => {
         { password: 0, tokens: 0 }
       );
 
-      //get Result
       const user = userInfo._doc;
 
       res.status(200).json({

@@ -62,7 +62,7 @@ function ManageAddresses() {
         ) : (
           <Box
             className={clsx(classes.card, classes.addAddress)}
-            onClick={() => dispatch(updateAddressState(true))} //Update Address Component State
+            onClick={() => dispatch(updateAddressState(true))}
           >
             <AddIcon style={{ marginRight: 10 }} />
             <Typography style={{ fontSize: 14, fontWeight: 600 }}>

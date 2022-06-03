@@ -167,7 +167,7 @@ function RegisterProfile() {
       } = await authentication();
       dispatch(setIsAuthenticate(isAuth));
       dispatch(setUserInfo(user));
-      setLoading(false); //Modal Close
+      setLoading(false);
 
       if (popupLogin) {
         dispatch(modalClose());
@@ -194,7 +194,7 @@ function RegisterProfile() {
   const submitForm = () => {
     const validatedFName = validateName(values.fName, "First Name");
     const validatedLName = validateName(values.lName, "Last Name");
-    const validatedPassword = validatePassword(values.password); //Set Error
+    const validatedPassword = validatePassword(values.password);
 
     setErrorMsg({
       fName: validatedFName.errorMsg,
@@ -206,7 +206,7 @@ function RegisterProfile() {
       lName: validatedLName.isError,
       password: validatedPassword.isError
     });
-    setSubmitCount(cnt => cnt + 1); //checkout useEffect
+    setSubmitCount(cnt => cnt + 1);
   };
 
   return <>

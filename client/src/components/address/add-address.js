@@ -116,7 +116,6 @@ function AddAddress() {
       toastMessage("New Address added", "success");
       dispatch(updateAddressState(false));
 
-      //If request Come from checkout
       if (query.get("ref")) {
         let routeString = query.get("ref");
         history.push(`/${routeString}`);
